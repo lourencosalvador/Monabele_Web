@@ -29,7 +29,7 @@ import { Buttom } from "./components/Buttom/Buttom";
 import { Card, CardFooter, CardHeader } from "./components/card/card";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-import { Test } from "./components/test/test";
+import { BenefitsOfUse } from "./components/benefits-of-use/benefits-of-use";
 
 export default function Home() {
   const [showPlayer, setShowPlayer] = useState(true);
@@ -41,6 +41,7 @@ export default function Home() {
     <div>
       <main className="relative overflow-hidden">
         <Header />
+      
         <div>
           <div>
             <Image
@@ -132,7 +133,7 @@ export default function Home() {
           <Buttom className="rounded-full text-[#656666] text-[13px] font-medium border-[1px] border-[#E0E0E0]">
             Now you're ready to know
           </Buttom>
-          <h1 className="font-seny text-[38.5px] w-[53%] text-center leading-[46.5px] text-[#1E1E1E]">
+          <h1 className="font-seny text-[38.5px] w-[42.125rem] text-center leading-[46.5px] text-[#1E1E1E]">
             Find out a little more about who we are and our product vision.
           </h1>
           <p className="text-[#656666] text-[12.5px] text-center leading-[27px] w-[48%]">
@@ -303,7 +304,7 @@ export default function Home() {
           </div>
         </GridContainer>
         <div>
-        <Test />
+         <BenefitsOfUse />
         </div>
       </section>
     </div>
