@@ -56,7 +56,7 @@ export const BenefitsOfUse = () => {
           
         </div>
       </GridContainer>
-      <AdvantagesOfUsingSellers />
+      
     </div>
   );
 };

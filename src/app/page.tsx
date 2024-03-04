@@ -30,6 +30,7 @@ import { Card, CardFooter, CardHeader } from "./components/card/card";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { BenefitsOfUse } from "./components/benefits-of-use/benefits-of-use";
+import { AdvantagesOfUsingSellers } from "./components/advantages-of-using-sellers/advantages-of-using-sellers";
 
 export default function Home() {
   const [showPlayer, setShowPlayer] = useState(true);
@@ -305,6 +306,9 @@ export default function Home() {
         </GridContainer>
         <div>
          <BenefitsOfUse />
+        </div>
+        <div>
+        <AdvantagesOfUsingSellers />
         </div>
       </section>
     </div>
