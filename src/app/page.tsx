@@ -31,6 +31,9 @@ import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { BenefitsOfUse } from "./components/benefits-of-use/benefits-of-use";
 import { AdvantagesOfUsingSellers } from "./components/advantages-of-using-sellers/advantages-of-using-sellers";
+import { AboutService } from "./components/about-service/about-service";
+import { InfoDowload } from "./components/info-dowload/info-dowload";
+import { Footer } from "./components/footer/footer";
 
 export default function Home() {
   const [showPlayer, setShowPlayer] = useState(true);
@@ -39,11 +42,11 @@ export default function Home() {
     setShowPlayer(false);
   };
   return (
-    <div>
+    <div className="overflow-hidden">
       <main className="relative overflow-hidden">
         <Header />
       
-        <div>
+        <div >
           <div>
             <Image
               src={Ellipse1}
@@ -54,7 +57,7 @@ export default function Home() {
               <Image
                 src={Ellipse2}
                 alt="bg Pattern..."
-                className="absolute top-[405px] z-1 right-0"
+                className="absolute top-[505px] z-1 right-[-2px]"
               />
             </div>
           </div>
@@ -66,22 +69,22 @@ export default function Home() {
         </div>
 
         <GridContainer>
-          <div className="flex justify-between px-[3.1rem] w-full h-[637.47px]">
-            <aside className="w-auto h-auto pt-36 flex flex-col gap-6">
+          <div className="flex  lg:justify-between items-center justify-center px-[3.1rem] w-full h-[637.47px]">
+            <aside className="w-auto  h-auto pt-36 flex flex-col gap-6 lg:items-baseline items-center">
               <Buttom className="w-[15.825rem] z-10 bg-[#250E47]  rounded-full border-[1px] border-[#E0E0E0]">
                 <span className="text-slate-100 text-[11.5px] font-medium">
                   {" "}
                   I wonder if you already knew how? 🤔
                 </span>
               </Buttom>
-              <h1 className="font-seny text-[3.35rem] w-[35rem] leading-[55px]   text-[#ffff]">
+              <h1 className="font-seny lg:text-left text-center lg:text-[3.35rem] md:text-[4.35rem] text-[3rem] lg:w-[35rem] lg:leading-[55px] leading-[70px]   text-[#ffff]">
                 All in a simplified currency exchange application.
               </h1>
-              <p className="text-[0.775rem] mb-2 w-[26rem] leading-[22px] text-[#B0B0B0] ">
+              <p className="text-[0.775rem] lg:text-left text-center mb-2 w-[26rem] leading-[22px] text-[#B0B0B0] ">
                 Embrace the future and enjoy a new, easier way to exchange money
                 in comfort and at leisure wherever you are.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 ">
                 <Image
                   src={buttomGoogleStorage}
                   alt="buttom in apple story"
@@ -90,7 +93,7 @@ export default function Home() {
                 <Image src={buttomApple} alt="buttom in apple" width={160} />
               </div>
             </aside>
-            <main className="relative w-auto h-auto pr-[11.5rem] pt-[4rem]">
+            <main className="lg:flex hidden relative w-auto h-auto pr-[11.5rem] pt-[4rem]">
               <Image
                 src={iphone2}
                 alt="buttom in apple story"
@@ -144,7 +147,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="w-full h-80  flex flex-wrap justify-center items-center">
+        <div className="w-full max-w-[75.25rem] mx-auto px-9 lg:mb-0 mb-28 h-80  flex  flex-wrap  items-center ">
           <Card>
             <CardHeader image={cardExchangeIcon} text="Currency Diversity" />
             <CardFooter
@@ -309,6 +312,13 @@ export default function Home() {
         </div>
         <div>
         <AdvantagesOfUsingSellers />
+        <AboutService />
+        </div>
+        <div>
+          <InfoDowload />
+        </div>
+        <div>
+          <Footer />
         </div>
       </section>
     </div>

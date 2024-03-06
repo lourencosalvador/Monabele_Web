@@ -1,6 +1,7 @@
 import { GridContainer } from "../../grid";
 import logo  from '../../../../../public/logo.svg'
 import arrow  from '../../../../../public/Vector(1).svg'
+import buttomNavigationMobile  from '../../../../../public/Circle Menu.svg'
 import Image from 'next/image'
 import { HeaderLinksData } from "./utils/utils";
 import { link } from "fs";
@@ -11,8 +12,13 @@ import { Buttom } from "../../Buttom/Buttom";
 export const Header = () => {
   return (
     <header className="header relative z-2 w-full h-20  bg-[#130419] flex items-center ">
-      <GridContainer>
-        <div className="z-10">
+      <GridContainer className="lg:px-3 px-5">
+        <div className="z-10 flex gap-3">
+        <Image 
+         src={buttomNavigationMobile}
+         alt='buttom navigation mobile'
+         className="lg:hidden flex"
+        />
         <Image 
          src={logo}
          alt='Logotipo do site Monabele'
@@ -20,9 +26,9 @@ export const Header = () => {
         />
         </div>
 
-      <List<HeaderLinks> items={HeaderLinksData} classeName="flex gap-7 justify-center ml-16 items-center">
+      <List<HeaderLinks> items={HeaderLinksData} classeName="lg:flex hidden gap-7 justify-center ml-16 items-center">
        {({item}) => (
-        <li key={item.route} className={`text-[12.5px] text-[#B0B0B0]  ${item.state && "bg-[#FFFFFF40] py-[6px] px-[0.70rem] rounded-sm font-semibold  text-[#ffff]"}`}>
+        <li key={item.route} className={`text-[12.5px] text-[#B0B0B0]  ${item.state && "bg-[#FFFFFF40] py-[6px] px-[0.70rem] rounded-md font-semibold  text-[#ffff]"}`}>
           <a href={item.route}>{item.label}</a>
         </li>
        )}
