@@ -9,8 +9,9 @@ import { List } from "../leyout/generic-list/List";
 
 export const AdvantagesOfUsingSellers = () => {
   return (
-    <div className="h-screen w-full  justify-center items-center px-44">
+    <div className="h-screen w-full mb-[10rem] justify-center items-center px-44">
       <GridContainer>
+        
         <div className="w-[24rem] h-screen flex  items-center">
           <div className=" flex flex-col  gap-[1.27rem]">
             <Buttom className="rounded-full border-[1px] w-[8rem] h-[2rem] border-[#E0E0E0] bg-slate-50">

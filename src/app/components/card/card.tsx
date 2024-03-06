@@ -19,14 +19,16 @@ interface HeaderProps {
 
 interface FooterProps {
   descripition: ReactNode;
-  className?: string
+  className?: string,
+  classNameDescripition?: string,
+  classNameViews?: string
 }
 
 export const Card = ({ children, className}: CardProps) => {
-  return <div className={twMerge("flex flex-col gap-2 p-[1.22rem] rounded-md hover:bg-rose-200 hover:cursor-pointer transition-all duration-150", className)}>{children}</div>;
+  return <div className={twMerge("flex flex-col gap-2 p-[1.22rem] rounded-md  hover:cursor-pointer transition-all duration-150", className)}>{children}</div>;
 };
 
-export const CardHeader = ({ image, text, className, classNameImage, classHome }: HeaderProps) => {
+export const CardHeader = ({ image, text, className, classNameImage, classHome, }: HeaderProps) => {
   return (
     <div className={twMerge("flex gap-3", classHome)}>
       <div className={className}>
@@ -37,13 +39,13 @@ export const CardHeader = ({ image, text, className, classNameImage, classHome }
   );
 };
 
-export const CardFooter = ({ descripition, className }: FooterProps) => {
+export const CardFooter = ({ descripition, className, classNameDescripition, classNameViews }: FooterProps) => {
   return (
     <div className={twMerge("flex flex-col gap-2 pl-11 ", className)}>
-      <p className="text-[#656666] text-[12px] w-[280px] leading-[30px] ">{descripition}</p>
+      <p className={twMerge("text-[#656666] text-[12px] w-[280px] leading-[30px]", classNameDescripition)}>{descripition}</p>
       <div className="flex gap-3">
-        <p className="text-[#FF2CDF] text-[12px] ">View more</p>
-        <Image src={arrow} alt="arrow in card"  />
+        <p className={twMerge("text-[#FF2CDF] text-[12px] ", classNameViews)}>View more</p>
+        <Image src={arrow} alt="arrow in card" />
       </div>
     </div>
   );
